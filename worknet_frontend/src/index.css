@@ -1,0 +1,84 @@
+﻿/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind base;
+/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind components;
+/* stylelint-disable-next-line at-rule-no-unknown */
+@tailwind utilities;
+
+/* stylelint-disable-next-line at-rule-no-unknown */
+@layer components {
+  /* @apply rules are Tailwind directives */
+}
+
+/* Reset pour meilleur affichage */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Animations supplémentaires pour le dashboard */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Styles pour les cartes Fiverr */
+.fiverr-card {
+  /* stylelint-disable-next-line at-rule-no-unknown */
+  @apply bg-white rounded-lg border border-gray-200 hover:shadow-md transition-all duration-300;
+}
+
+.fiverr-card-hover:hover {
+  /* stylelint-disable-next-line at-rule-no-unknown */
+  @apply border-green-400 shadow-lg transform -translate-y-1; /* stylelint-disable-line at-rule-no-unknown */
+}
+
+/* Badges de statut */
+.status-badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.status-completed {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-in-progress {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.status-pending {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-cancelled {
+  @apply bg-red-100 text-red-800;
+}
+
+/* Loader spinner */
+.loader {
+  @apply animate-spin rounded-full border-4 border-gray-200 border-t-green-500;
+}
+
+/* Gradients Fiverr */
+.gradient-fiverr {
+  background: linear-gradient(135deg, #1DBF73 0%, #0FA958 100%);
+}
+
+.gradient-fiverr-light {
+  background: linear-gradient(135deg, #E9F9F0 0%, #D4F3E3 100%);
+}

@@ -1,0 +1,259 @@
+.footer {
+  background: #2c2c2c;
+  color: #fff;
+  padding: 60px 0 30px;
+  margin-top: auto;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Top Section */
+.topSection {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 992px) {
+  .topSection {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Brand Section */
+.brandSection {
+  max-width: 300px;
+}
+
+.logo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.logoGreen {
+  color: #1DBF73;
+}
+
+.logoDark {
+  color: white;
+}
+
+.tagline {
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 12px;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.socialLink:hover {
+  background: #1DBF73;
+  transform: translateY(-2px);
+}
+
+/* Links Grid */
+.linksGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .linksGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .linksGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.linkSection {
+  margin-bottom: 20px;
+}
+
+.linkTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkList li {
+  margin-bottom: 12px;
+}
+
+.link {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #1DBF73;
+}
+
+/* Trust Section */
+.trustSection {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px 0;
+  margin: 30px 0;
+}
+
+.trustBadges {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.trustBadge {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.trustIcon {
+  font-size: 2rem;
+  color: #1DBF73;
+}
+
+.trustTitle {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.trustText {
+  font-size: 0.85rem;
+  color: #a0a0a0;
+}
+
+/* Bottom Section */
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .bottomSection {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.copyright {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.legalLink {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.legalLink:hover {
+  color: #1DBF73;
+}
+
+/* Language Selector */
+.languageSelector {
+  position: relative;
+}
+
+.languageSelect {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px 35px 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+.languageSelect:focus {
+  outline: none;
+  border-color: #1DBF73;
+}
+
+/* App Section */
+.appSection {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 30px;
+  text-align: center;
+}
+
+.appBadges {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.appBadge {
+  height: 40px;
+}
+
+.appStore,
+.googlePlay {
+  height: 100%;
+  filter: grayscale(100%) brightness(0) invert(1);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.appStore:hover,
+.googlePlay:hover {
+  opacity: 1;
+}

@@ -1,0 +1,505 @@
+/* Reset Fiverr */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typographie Fiverr */
+h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+h4 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+h5 {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+h6 {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+p {
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.small-text {
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
+}
+
+/* Liens Fiverr */
+a {
+  color: var(--fiverr-green);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--fiverr-green-dark);
+  text-decoration: underline;
+}
+
+/* Boutons Fiverr */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-md);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Bouton Primaire (vert Fiverr) */
+.btn-primary {
+  background-color: var(--fiverr-green);
+  color: white;
+  border: 1px solid var(--fiverr-green);
+}
+
+.btn-primary:hover {
+  background-color: var(--fiverr-green-dark);
+  border-color: var(--fiverr-green-dark);
+  text-decoration: none;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Bouton Secondaire */
+.btn-secondary {
+  background-color: white;
+  color: var(--fiverr-green);
+  border: 1px solid var(--fiverr-green);
+}
+
+.btn-secondary:hover {
+  background-color: var(--fiverr-green-light);
+  text-decoration: none;
+}
+
+/* Bouton Tertiaire */
+.btn-tertiary {
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-tertiary:hover {
+  background-color: var(--bg-hover);
+  border-color: var(--border-hover);
+}
+
+/* Bouton Danger */
+.btn-danger {
+  background-color: var(--error);
+  color: white;
+  border: 1px solid var(--error);
+}
+
+.btn-danger:hover {
+  background-color: #d63030;
+}
+
+/* Tailles de boutons */
+.btn-sm {
+  padding: 6px 12px;
+  font-size: var(--font-size-sm);
+}
+
+.btn-md {
+  padding: 10px 20px;
+  font-size: var(--font-size-md);
+}
+
+.btn-lg {
+  padding: 14px 28px;
+  font-size: var(--font-size-lg);
+}
+
+/* Formulaire Fiverr */
+.form-group {
+  margin-bottom: var(--space-lg);
+}
+
+.form-label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: var(--font-size-md);
+  font-family: var(--font-family);
+  color: var(--text-primary);
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--fiverr-green);
+  box-shadow: 0 0 0 2px rgba(29, 191, 115, 0.1);
+}
+
+.form-control::placeholder {
+  color: var(--text-light);
+}
+
+.form-control:disabled {
+  background-color: var(--bg-secondary);
+  cursor: not-allowed;
+}
+
+/* Checkbox & Radio Fiverr */
+.checkbox-label,
+.radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  color: var(--text-secondary);
+}
+
+.checkbox-input,
+.radio-input {
+  margin-right: var(--space-sm);
+  width: 18px;
+  height: 18px;
+  accent-color: var(--fiverr-green);
+}
+
+/* Cartes Fiverr */
+.card {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-sm);
+}
+
+.card-body {
+  color: var(--text-secondary);
+}
+
+/* Badges Fiverr */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-primary {
+  background-color: var(--fiverr-green-light);
+  color: var(--fiverr-green);
+}
+
+.badge-secondary {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.badge-success {
+  background-color: #e9f9f0;
+  color: var(--success);
+}
+
+.badge-warning {
+  background-color: #fff5e6;
+  color: var(--warning);
+}
+
+.badge-error {
+  background-color: #fee;
+  color: var(--error);
+}
+
+/* Alertes Fiverr */
+.alert {
+  padding: var(--space-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  margin-bottom: var(--space-md);
+}
+
+.alert-success {
+  background-color: var(--fiverr-green-light);
+  border-color: var(--fiverr-green);
+  color: var(--fiverr-green-dark);
+}
+
+.alert-warning {
+  background-color: #fff5e6;
+  border-color: var(--warning);
+  color: #b37400;
+}
+
+.alert-error {
+  background-color: #fee;
+  border-color: var(--error);
+  color: var(--error);
+}
+
+.alert-info {
+  background-color: #e6f0ff;
+  border-color: var(--info);
+  color: var(--info);
+}
+
+/* Grille Fiverr */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc(-1 * var(--space-md));
+}
+
+.col {
+  padding: 0 var(--space-md);
+}
+
+/* Navigation Fiverr */
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid var(--border-color);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--fiverr-green);
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: var(--space-xl);
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--fiverr-green);
+}
+
+/* Footer Fiverr */
+.footer {
+  background-color: var(--bg-secondary);
+  padding: var(--space-3xl) 0 var(--space-xl);
+  border-top: 1px solid var(--border-color);
+}
+
+.footer-section {
+  margin-bottom: var(--space-xl);
+}
+
+.footer-title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  line-height: 2;
+}
+
+.footer-link:hover {
+  color: var(--fiverr-green);
+}
+
+/* Utilitaires Fiverr */
+.text-green {
+  color: var(--fiverr-green) !important;
+}
+
+.bg-green-light {
+  background-color: var(--fiverr-green-light) !important;
+}
+
+.border-green {
+  border-color: var(--fiverr-green) !important;
+}
+
+.hover-bg-green:hover {
+  background-color: var(--fiverr-green) !important;
+}
+
+.hover-text-green:hover {
+  color: var(--fiverr-green) !important;
+}
+
+/* Animation Fiverr */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from { 
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease;
+}
+
+.slide-down {
+  animation: slideDown 0.3s ease;
+}
+
+/* Media Queries Fiverr */
+@media (max-width: 768px) {
+  :root {
+    --font-size-3xl: 32px;
+    --font-size-2xl: 24px;
+    --font-size-xl: 20px;
+    --font-size-lg: 18px;
+  }
+  
+  .container {
+    padding: 0 var(--space-md);
+  }
+  
+  .btn {
+    padding: var(--space-sm) var(--space-md);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --font-size-3xl: 28px;
+    --font-size-2xl: 22px;
+  }
+}

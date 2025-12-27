@@ -1,0 +1,380 @@
+.navbar {
+  background: white;
+  border-bottom: 1px solid #e4e5e7;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #62646a;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.logoGreen {
+  color: #1DBF73;
+}
+
+.logoDark {
+  color: #222325;
+}
+
+.desktopNav {
+  display: flex;
+  gap: 30px;
+  margin-left: 40px;
+}
+
+.navLink {
+  color: #62646a;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.navLink:hover {
+  color: #1DBF73;
+}
+
+.navLink.active {
+  color: #1DBF73;
+}
+
+.navLink.active::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #1DBF73;
+  border-radius: 2px;
+}
+
+/* Search Bar */
+.searchContainer {
+  flex: 1;
+  max-width: 600px;
+  margin: 0 40px;
+}
+
+.searchWrapper {
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #95979d;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 16px 12px 48px;
+  border: 1px solid #e4e5e7;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+  background: #f7f7f7;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #1DBF73;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(29, 191, 115, 0.1);
+}
+
+/* Actions Section */
+.actionsSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.actionButton {
+  position: relative;
+  background: none;
+  border: none;
+  color: #62646a;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.actionButton:hover {
+  background: #f7f7f7;
+  color: #1DBF73;
+}
+
+.badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: #f74040;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+/* User Dropdown */
+.userDropdown {
+  position: relative;
+}
+
+.userButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 1px solid #e4e5e7;
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.userButton:hover {
+  border-color: #dadbdd;
+  background: #f7f7f7;
+}
+
+.userAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userIcon {
+  font-size: 1.5rem;
+  color: #62646a;
+}
+
+.userName {
+  font-weight: 500;
+  color: #222325;
+  font-size: 0.9rem;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  width: 300px;
+  background: white;
+  border: 1px solid #e4e5e7;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+}
+
+.userDropdown:hover .dropdownMenu {
+  display: block;
+}
+
+.dropdownHeader {
+  padding: 20px;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.dropdownUserInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dropdownAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dropdownAvatarIcon {
+  font-size: 3rem;
+  color: #62646a;
+}
+
+.dropdownUserName {
+  font-weight: 600;
+  color: #222325;
+  margin-bottom: 4px;
+}
+
+.dropdownUserEmail {
+  font-size: 0.85rem;
+  color: #95979d;
+}
+
+.dropdownDivider {
+  height: 1px;
+  background: #f7f7f7;
+  margin: 8px 0;
+}
+
+.dropdownItem {
+  display: block;
+  padding: 12px 20px;
+  color: #62646a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.dropdownItem:hover {
+  background: #f7f7f7;
+  color: #1DBF73;
+}
+
+.logoutButton {
+  width: 100%;
+  text-align: left;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  color: #f74040;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.logoutButton:hover {
+  background: #fee;
+}
+
+/* Mobile Navigation */
+.mobileNav {
+  display: none;
+  background: white;
+  border-top: 1px solid #e4e5e7;
+  padding: 20px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mobileNavLink {
+  display: block;
+  padding: 12px 0;
+  color: #62646a;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.mobileNavLink:last-child {
+  border-bottom: none;
+}
+
+.mobileNavLink:hover {
+  color: #1DBF73;
+}
+
+.mobileNavLink.active {
+  color: #1DBF73;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .searchContainer {
+    margin: 0 20px;
+  }
+  
+  .desktopNav {
+    margin-left: 20px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+    height: 60px;
+  }
+  
+  .menuButton {
+    display: block;
+  }
+  
+  .desktopNav {
+    display: none;
+  }
+  
+  .searchContainer {
+    margin: 0 10px;
+  }
+  
+  .userName {
+    display: none;
+  }
+  
+  .mobileNav {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .searchContainer {
+    display: none;
+  }
+  
+  .actionsSection {
+    gap: 10px;
+  }
+}

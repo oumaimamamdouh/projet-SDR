@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Test CORS Connection</h2>
+  
+  <button onclick="testCors()">Test Backend Connection</button>
+  <div id="result" style="margin-top: 20px; padding: 10px;"></div>
+  
+  <script>
+    async function testCors() {
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = '<p style="color: blue;">Testing...</p>';
+      
+      try {
+        const response = await fetch('http://localhost:5000/health');
+        const data = await response.json();
+        
+        resultDiv.innerHTML = `
+          <div style="background: #d4edda; color: #155724; padding: 15px; border-radius: 5px;">
+            <h3>✅ SUCCESS!</h3>
+            <p><strong>Backend:</strong> ${data.service}</p>
+            <p><strong>Message:</strong> ${data.message}</p>
+            <p><strong>Port:</strong> ${data.port}</p>
+          </div>
+        `;
+      } catch (error) {
+        resultDiv.innerHTML = `
+          <div style="background: #f8d7da; color: #721c24; padding: 15px; border-radius: 5px;">
+            <h3>❌ CORS ERROR!</h3>
+            <p><strong>Error:</strong> ${error.message}</p>
+            <p>Make sure backend is running on port 5000 and CORS is configured.</p>
+          </div>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>

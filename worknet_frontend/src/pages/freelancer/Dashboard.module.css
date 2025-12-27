@@ -1,0 +1,356 @@
+.dashboard {
+  padding: 20px 0;
+}
+
+/* Welcome Section */
+.welcomeSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.welcomeTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #222325;
+  margin-bottom: 8px;
+}
+
+.welcomeSubtitle {
+  color: #62646a;
+  font-size: 1rem;
+}
+
+.createButton {
+  background: #1DBF73;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.createButton:hover {
+  background: #19a463;
+  transform: translateY(-1px);
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.statCard {
+  background: white;
+  border: 1px solid #e4e5e7;
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.2s;
+}
+
+.statCard:hover {
+  border-color: #dadbdd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.statHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.statIcon {
+  font-size: 1.5rem;
+  color: #1DBF73;
+  background: #e9f9f0;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statChange {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.changeUp {
+  color: #1DBF73;
+}
+
+.changeDown {
+  color: #f74040;
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222325;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  color: #95979d;
+  font-size: 0.9rem;
+}
+
+/* Content Grid */
+.contentGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1024px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: white;
+  border: 1px solid #e4e5e7;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.cardHeader {
+  padding: 20px;
+  border-bottom: 1px solid #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222325;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.viewAll {
+  color: #1DBF73;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.viewAll:hover {
+  color: #19a463;
+}
+
+/* Table */
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  background: #f7f7f7;
+  padding: 12px 20px;
+  text-align: left;
+  font-weight: 600;
+  color: #62646a;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #e4e5e7;
+}
+
+.table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid #f7f7f7;
+  color: #62646a;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.clientCell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.clientAvatar {
+  width: 32px;
+  height: 32px;
+  background: #1DBF73;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.amountCell {
+  font-weight: 600;
+  color: #222325;
+}
+
+.dateCell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+/* Status Badges */
+.statusBadge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.statusBadge.active {
+  background: #e9f9f0;
+  color: #1DBF73;
+}
+
+.statusBadge.completed {
+  background: #e6f0ff;
+  color: #2a73cc;
+}
+
+.statusBadge.pending {
+  background: #fff5e6;
+  color: #ffbe5d;
+}
+
+/* Performance List */
+.performanceList {
+  padding: 20px;
+}
+
+.performanceItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #f7f7f7;
+}
+
+.performanceItem:last-child {
+  border-bottom: none;
+}
+
+.gigInfo {
+  flex: 1;
+}
+
+.gigName {
+  font-weight: 600;
+  color: #222325;
+  margin-bottom: 4px;
+}
+
+.gigStats {
+  display: flex;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: #95979d;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.conversionRate {
+  text-align: right;
+}
+
+.rateValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1DBF73;
+}
+
+.rateLabel {
+  font-size: 0.8rem;
+  color: #95979d;
+  margin-top: 2px;
+}
+
+/* Quick Actions */
+.quickActions {
+  margin-top: 40px;
+}
+
+.sectionTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222325;
+  margin-bottom: 20px;
+}
+
+.actionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.actionCard {
+  background: white;
+  border: 1px solid #e4e5e7;
+  border-radius: 12px;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+}
+
+.actionCard:hover {
+  border-color: #dadbdd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.actionIcon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.actionTitle {
+  font-weight: 600;
+  color: #222325;
+  margin-bottom: 8px;
+}
+
+.actionDescription {
+  color: #95979d;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
